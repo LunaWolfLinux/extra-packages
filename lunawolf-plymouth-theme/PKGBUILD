@@ -1,0 +1,20 @@
+# Maintainer: HypherionSA <address@hidden>
+
+pkgname=lunawolf-plymouth-theme
+pkgver=1.0
+pkgrel=0
+pkgdesc="Default plymouth theme for LunaWolf"
+arch=('any')
+url="https://github.com/LunaWolfLinux/extra-packages"
+license=('GPL3')
+depends=('plymouth')
+groups=(lunawolf-plymouth-themes)
+options=(!strip !emptydirs)
+
+prepare() {
+	cp -af ../files/. "$srcdir"
+}
+
+package() {
+	(find lunawolf -type f -exec install -Dm 644 "{}" "$pkgdir/usr/share/plymouth/themes/{}" \;)
+}

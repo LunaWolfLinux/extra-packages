@@ -1,0 +1,16 @@
+pkgname=lunawolf-fonts
+pkgver=1.0
+pkgrel=0
+pkgdesc="Text and icon fonts for LunaWolf"
+arch=('any')
+url="https://github.com/LunaWolfLinux/extra-packages"
+license=('GPL3')
+options=(!strip !emptydirs)
+
+prepare() {
+	cp -af ../files/. "$srcdir"
+}
+
+package() {
+	(find * -type f -exec install -Dm 644 "{}" "$pkgdir/usr/share/fonts/lunawolf/{}" \;)
+}

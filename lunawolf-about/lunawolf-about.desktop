@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=About LunaWolf Linux
+Comment=Details regarding LunaWolf and credits
+Exec=lunawolf-about
+Icon=lunawolf-cyan
+Type=Application
+Categories=System;

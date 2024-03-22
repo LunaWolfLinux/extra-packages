@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+yad --class="GSu" \
+    --title="Password" \
+    --text="Enter password for <b>$USER</b>" \
+    --image="dialog-password" \
+    --width=235	\
+    --entry --hide-text \
+    --center --undecorated --no-buttons

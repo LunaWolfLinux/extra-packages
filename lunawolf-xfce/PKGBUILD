@@ -1,0 +1,32 @@
+pkgname=lunawolf-xfce
+pkgver=1.0
+pkgrel=2
+pkgdesc="XFCE desktop configurations for LunaWolf"
+arch=('any')
+url="https://github.com/LunaWolfLinux/lunawolf"
+license=('GPL3')
+options=(!strip !emptydirs)
+
+prepare() {
+	cp -af ../files/. "$srcdir"
+}
+
+package() {
+	local _configdir="$pkgdir"/etc/skel/.config
+	local _bindir="$pkgdir"/usr/bin
+	local _pixdir="$pkgdir"/usr/share/pixmaps
+
+	mkdir -p "$_configdir" && mkdir -p "$_bindir" && mkdir -p "$_pixdir"
+	
+	# Copy Configs
+	cp -r "$srcdir"/xfce4 					"$_configdir"
+	cp -r "$srcdir"/xfce-themes 			"$_configdir"
+	chmod +x "$_configdir"/xfce-themes/apply.sh
+
+	# Copy scripts
+	cp -r "$srcdir"/scripts/* 				"$_bindir"
+	chmod +x "$_bindir"/*
+
+	# Pixmap
+	install -Dm 644 xfce-menucraft.svg		"$_pixdir"/xfce-menucraft.svg	
+}

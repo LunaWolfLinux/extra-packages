@@ -1,0 +1,20 @@
+pkgname=lunawolf-about
+pkgver=1.0
+pkgrel=0
+pkgdesc="Details regarding LunaWolf and credits"
+arch=('any')
+url="https://github.com/LunaWolfLinux/lunawolf"
+license=('GPL3')
+depends=('yad')
+options=(!strip !emptydirs)
+
+source=(lunawolf-about
+		lunawolf-about.desktop)
+
+sha256sums=('d366b1d126e56184e5d174c3dc7e7678c8200188ba29ed1dd6bc6b5ed7904939'
+            'ba9fd5b3ef0110705afef3e006bf68e83ab5723fd605715ee77aa0339ef4cb9f')
+
+package() {
+	install -Dm 755 lunawolf-about   		"$pkgdir"/usr/bin/lunawolf-about
+	install -Dm 644 lunawolf-about.desktop	"$pkgdir"/usr/share/applications/lunawolf-about.desktop
+}

@@ -1,0 +1,21 @@
+# Maintainer: HypherionSA <address@hidden>
+
+pkgname=lunawolf-grub-theme
+pkgver=1.0
+pkgrel=0
+pkgdesc="Default grub2 bootloader theme for LunaWolf Linux"
+arch=('any')
+url="https://github.com/LunaWolfLinux/extra-packages"
+license=('GPL3')
+depends=('grub')
+groups=(lunawolf-grub-themes)
+options=(!strip !emptydirs)
+install='theme.install'
+
+prepare() {
+	cp -af ../files/. "$srcdir"
+}
+
+package() {
+	(find lunawolf -type f -exec install -Dm 644 "{}" "$pkgdir/usr/share/grub/themes/{}" \;)
+}

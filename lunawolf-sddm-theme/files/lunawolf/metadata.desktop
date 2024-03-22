@@ -1,0 +1,14 @@
+[SddmGreeterTheme]
+Name=LunaWolf
+Description=Default sddm greeter theme for LunaWolf
+Version=1.0
+Theme-Id=lunawolf
+Theme-API=2.11
+Author=HypherionSA
+Email=hypherionmc@gmail.com
+Copyright=Copyright (C) 2024 HypherionSA
+License=GPL-3.0-or-later
+Type=sddm-theme
+MainScript=main.qml
+ConfigFile=theme.conf
+TranslationsDirectory=translations

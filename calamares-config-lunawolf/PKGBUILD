@@ -1,0 +1,32 @@
+# Maintainer: HypherionSA <address@hidden>
+
+pkgname=calamares-config-lunawolf
+pkgver=1.0
+pkgrel=1
+pkgdesc="Calamares configuration for LunaWolf Linux."
+arch=('any')
+url="https://github.com/LunaWolfLinux/extra-packages"
+license=('GPL')
+conflicts=('calamares-config' 'calamares-config-prime' 'calamares-config-wayland')
+
+prepare() {
+	cp -af ../files/. "$srcdir"
+}
+
+package() {
+	local _bindir="$pkgdir"/usr/bin
+	mkdir -p "$_bindir"
+
+	# copy all files recursively in /etc/calamares
+	(find calamares -type f -exec install -Dm 644 "{}" "$pkgdir/etc/{}" \;)
+
+	# copy install scripts
+	install -Dm 755 post_install.sh					"$_bindir"/post_install.sh
+	install -Dm 755 chrooted_post_install.sh		"$_bindir"/chrooted_post_install.sh
+	install -Dm 755 post_install_nvidia.sh			"$_bindir"/post_install_nvidia.sh
+	install -Dm 755 chrooted_post_install_nvidia.sh	"$_bindir"/chrooted_post_install_nvidia.sh
+
+	# make scripts executable
+	chmod 755 "$pkgdir"/etc/calamares/launch.sh
+	chmod 755 "$pkgdir"/etc/calamares/branding/lunawolf/test-slides.sh
+}

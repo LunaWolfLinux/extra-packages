@@ -1,0 +1,18 @@
+pkgname=lunawolf-geany
+pkgver=1.0
+pkgrel=0
+pkgdesc="Geany Config Stuff for LunaWolf"
+arch=('any')
+url="https://github.com/LunaWolfLinux/extra-packages"
+license=('GPL3')
+options=(!strip !emptydirs)
+
+prepare() {
+	cp -af ../files/. "$srcdir"
+}
+
+package() {
+	local _cfgdir="$pkgdir"/etc/skel/.config
+	mkdir -p "$_cfgdir"
+	cp -r "$srcdir"/* "$_cfgdir"
+}

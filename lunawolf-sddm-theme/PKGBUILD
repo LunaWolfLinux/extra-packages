@@ -1,0 +1,20 @@
+# Maintainer: HypherionSA <address@hidden>
+
+pkgname=lunawolf-sddm-theme
+pkgver=1.0
+pkgrel=0
+pkgdesc="Default sddm theme for LunaWolf"
+arch=('any')
+url="https://github.com/LunaWolfLinux/extra-packages"
+license=('GPL3')
+depends=('sddm' 'qt5-declarative' 'qt5-graphicaleffects' 'qt5-quickcontrols2' 'qt5-svg')
+groups=(lunawolf-sddm-themes)
+options=(!strip !emptydirs)
+
+prepare() {
+	cp -af ../files/. "$srcdir"
+}
+
+package() {
+	(find lunawolf -type f -exec install -Dm 644 "{}" "$pkgdir/usr/share/sddm/themes/{}" \;)
+}

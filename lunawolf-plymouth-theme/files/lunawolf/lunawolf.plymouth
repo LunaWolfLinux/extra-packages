@@ -1,0 +1,9 @@
+[Plymouth Theme]
+Name=lunawolf
+Description=default plymouth theme for lunawolf
+Comment=Created By HypherionSA
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/lunawolf
+ScriptFile=/usr/share/plymouth/themes/lunawolf/lunawolf.script

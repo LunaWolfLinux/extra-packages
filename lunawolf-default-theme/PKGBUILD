@@ -1,0 +1,19 @@
+pkgname=lunawolf-gtk-theme-everforest
+pkgver=1.0
+pkgrel=0
+pkgdesc="Everforest gtk theme for LunaWolf"
+arch=('any')
+url="https://github.com/LunaWolfLinux/extra-packages"
+license=('GPL3')
+groups=(lunawolf-themes)
+options=(!strip !emptydirs)
+
+prepare() {
+	cp -af ../files/. "$srcdir"
+}
+
+package() {
+	local _themesdir="$pkgdir"/usr/share/themes
+	mkdir -p "$_themesdir"
+	cp -r "$srcdir"/* "$_themesdir"
+}

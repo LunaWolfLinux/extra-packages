@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+## sudo askpass helper
+export SUDO_ASKPASS=/usr/bin/ask-user-pw-xfce
+
+## execute the application
+sudo -A $1
