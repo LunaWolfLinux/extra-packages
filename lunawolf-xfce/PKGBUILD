@@ -1,6 +1,6 @@
 pkgname=lunawolf-xfce
 pkgver=1.0
-pkgrel=2
+pkgrel=7
 pkgdesc="XFCE desktop configurations for LunaWolf"
 arch=('any')
 url="https://github.com/LunaWolfLinux/lunawolf"

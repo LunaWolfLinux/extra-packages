@@ -2,7 +2,7 @@
 
 pkgname=calamares-config-lunawolf
 pkgver=1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Calamares configuration for LunaWolf Linux."
 arch=('any')
 url="https://github.com/LunaWolfLinux/extra-packages"
@@ -28,5 +28,6 @@ package() {
 
 	# make scripts executable
 	chmod 755 "$pkgdir"/etc/calamares/launch.sh
+	chmod +x "$pkgdir"/etc/calamares/launch.sh
 	chmod 755 "$pkgdir"/etc/calamares/branding/lunawolf/test-slides.sh
 }

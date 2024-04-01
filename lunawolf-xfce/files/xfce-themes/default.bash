@@ -1,4 +1,4 @@
-# LunaWolf Default Theme
+# Default Theme
 # ------------------------------------------------------------------------------
 
 # Colors
@@ -37,4 +37,4 @@ xfwm_theme='Everforest'
 gtk_font='Noto Sans 9'
 gtk_theme='Everforest'
 icon_theme='Magna-Dark-Icons'
-cursor_theme='Breeze_Dark'
+cursor_theme='Breeze_Dark_Teal'
