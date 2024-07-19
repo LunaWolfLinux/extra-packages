@@ -2,7 +2,7 @@
 
 pkgname=lunawolf-grub-theme
 pkgver=1.0
-pkgrel=0
+pkgrel=1
 pkgdesc="Default grub2 bootloader theme for LunaWolf Linux"
 arch=('any')
 url="https://github.com/LunaWolfLinux/extra-packages"

@@ -13,7 +13,7 @@ yad --title='About LunaWolf Linux' --window-icon='lunawolf-cyan' \
 	--about \
 	--pname='LunaWolf Linux' \
 	--pversion="$version" \
-	--image='distributor-logo-lunawolf' \
+	--image='lunawolf-cyan' \
 	--comments="A Lightweight Arch Linux based distribution aimed at software developers and general linux users." \
 	--copyright="Copyright `date +'%Y'`, HypherionSA <hypherionmc.com>" \
 	--license='GPL3' \

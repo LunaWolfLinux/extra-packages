@@ -2,7 +2,7 @@
 
 pkgname=calamares-config-lunawolf
 pkgver=1.0
-pkgrel=4
+pkgrel=5
 pkgdesc="Calamares configuration for LunaWolf Linux."
 arch=('any')
 url="https://github.com/LunaWolfLinux/extra-packages"

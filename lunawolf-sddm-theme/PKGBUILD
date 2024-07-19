@@ -2,7 +2,7 @@
 
 pkgname=lunawolf-sddm-theme
 pkgver=1.0
-pkgrel=0
+pkgrel=1
 pkgdesc="Default sddm theme for LunaWolf"
 arch=('any')
 url="https://github.com/LunaWolfLinux/extra-packages"
