@@ -1,6 +1,6 @@
 pkgname=lunawolf-about
 pkgver=1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Details regarding LunaWolf and credits"
 arch=('any')
 url="https://github.com/LunaWolfLinux/lunawolf"
@@ -12,7 +12,7 @@ source=(lunawolf-about
 		lunawolf-about.desktop)
 
 sha256sums=('1e0da1f9fa40b538972db53e7aa1c131244e8d29d7004e6e32e457af805702a6'
-            'ba9fd5b3ef0110705afef3e006bf68e83ab5723fd605715ee77aa0339ef4cb9f')
+            'd97685a04d54b297892add487b255f446aa125989094687111c69d3bde57245a')
 
 package() {
 	install -Dm 755 lunawolf-about   		"$pkgdir"/usr/bin/lunawolf-about

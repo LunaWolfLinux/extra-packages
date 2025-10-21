@@ -1,6 +1,6 @@
 pkgname=lunawolf-cursor-breeze-dark
 pkgver=1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Breeze Dark Cursor theme for LunaWolf"
 arch=('any')
 url="https://github.com/LunaWolfLinux/extra-packages"

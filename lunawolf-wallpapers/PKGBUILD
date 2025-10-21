@@ -1,6 +1,6 @@
 pkgname=lunawolf-backgrounds
 pkgver=1.0
-pkgrel=1
+pkgrel=4
 pkgdesc="Default wallpapers for LunaWolf"
 arch=('any')
 url="https://github.com/LunaWolfLinux/extra-packages"

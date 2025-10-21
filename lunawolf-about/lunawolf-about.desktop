@@ -2,6 +2,9 @@
 Name=About LunaWolf Linux
 Comment=Details regarding LunaWolf and credits
 Exec=lunawolf-about
-Icon=lunawolf-cyan
+Icon=lunawolf-logo
 Type=Application
 Categories=System;
+Path=
+Terminal=false
+StartupNotify=false

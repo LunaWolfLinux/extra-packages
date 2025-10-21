@@ -1,6 +1,6 @@
 pkgname=lunawolf-gtk-theme-everforest
 pkgver=1.0
-pkgrel=0
+pkgrel=1
 pkgdesc="Everforest gtk theme for LunaWolf"
 arch=('any')
 url="https://github.com/LunaWolfLinux/extra-packages"
