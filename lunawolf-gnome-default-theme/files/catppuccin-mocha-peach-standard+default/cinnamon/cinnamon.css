@@ -431,8 +431,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 #panel {
   font-weight: bold;
-  height: 36px;
-  width: 42px;
+  height: 34px;
+  width: 40px;
 }
 
 #panel:highlight {

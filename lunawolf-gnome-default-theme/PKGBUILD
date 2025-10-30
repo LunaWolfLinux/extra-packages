@@ -1,6 +1,6 @@
 pkgname=lunawolf-gnome-default-theme
 pkgver=1.0
-pkgrel=2
+pkgrel=3
 pkgdesc="Catppuccin gtk themes for LunaWolf"
 arch=('any')
 url="https://github.com/LunaWolfLinux/extra-packages"
