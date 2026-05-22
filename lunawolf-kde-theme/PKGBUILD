@@ -1,0 +1,44 @@
+pkgname=lunawolf-kde-theme
+pkgver=1.0
+pkgrel=0
+pkgdesc="Default Themes and Icons for Lunawolf KDE"
+arch=('any')
+url="https://github.com/LunaWolfLinux/extra-packages"
+license=('GPL3')
+groups=(lunawolf-themes)
+options=(!strip !emptydirs)
+
+prepare() {
+	cp -af ../files/. "$srcdir"
+}
+
+package() {
+	# Themes (GTK / Kvantum etc)
+	if [ -d "$srcdir/themes" ]; then
+		install -dm755 "$pkgdir/usr/share/themes"
+		cp -r "$srcdir/themes/"* "$pkgdir/usr/share/themes/"
+	fi
+
+	# Icons + cursors (same base dir)
+	if [ -d "$srcdir/icons" ]; then
+		install -dm755 "$pkgdir/usr/share/icons"
+		cp -r "$srcdir/icons/"* "$pkgdir/usr/share/icons/"
+	fi
+
+	if [ -d "$srcdir/cursors" ]; then
+		install -dm755 "$pkgdir/usr/share/icons"
+		cp -r "$srcdir/cursors/"* "$pkgdir/usr/share/icons/"
+	fi
+
+	# Plasma themes
+	if [ -d "$srcdir/plasma" ]; then
+		install -dm755 "$pkgdir/usr/share/plasma/desktoptheme"
+		cp -r "$srcdir/plasma/"* "$pkgdir/usr/share/plasma/desktoptheme/"
+	fi
+
+	# Wallpapers
+	if [ -d "$srcdir/wallpapers" ]; then
+		install -dm755 "$pkgdir/usr/share/wallpapers"
+		cp -r "$srcdir/wallpapers/"* "$pkgdir/usr/share/wallpapers/"
+	fi
+}

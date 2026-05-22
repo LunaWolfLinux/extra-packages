@@ -1,7 +1,7 @@
 pkgname=lunawolf-icons-magna
 pkgver=1.0
-pkgrel=1
-pkgdesc="Magna Icon theme for LunaWolf"
+pkgrel=2
+pkgdesc="Icon Themes for Lunawolf"
 arch=('any')
 url="https://github.com/LunaWolfLinux/extra-packages"
 license=('GPL3')
